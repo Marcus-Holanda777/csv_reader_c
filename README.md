@@ -3,9 +3,9 @@
 Este repositório contém um módulo Python implementado em C, chamado `csv_reader`. Ele oferece uma função eficiente para leitura de arquivos CSV, retornando os dados no formato de lista de listas em Python.
 
 > [!IMPORTANT]
-> Neste tutorial, você configura o Visual Studio Code para usar o compilador GCC C++ (g++) [tutorial](https://code.visualstudio.com/docs/cpp/config-mingw) .
-> A API `<Python.h>` instalação do python **C:/Users/{SEU_USUARIO}/AppData/Local/Programs/Python/Python312/include** .
-> Usei o Python 3.12 no Windows .
+> * Neste tutorial, você configura o Visual Studio Code para usar o compilador GCC C++ (g++) [tutorial](https://code.visualstudio.com/docs/cpp/config-mingw) . 
+> * A API `<Python.h>` fica na instalação do python `C:/Users/USER/AppData/Local/Programs/Python/Python312/include`. 
+> * Usei o Python 3.12 no Windows .
 
 ---
 
