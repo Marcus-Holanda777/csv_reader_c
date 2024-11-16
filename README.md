@@ -166,3 +166,101 @@ PyMODINIT_FUNC PyInit_csv_reader(void) {
 
 * Define a estrutura do módulo.
 * `PyInit_csv_reader`: Função de inicialização do módulo, que é chamada quando o módulo é importado em Python.
+
+## Configuração do Projeto com `pyproject.toml`
+
+Para configurar e construir o módulo usando `setuptools` e um arquivo `pyproject.toml`, siga os passos abaixo:
+
+### Crie o Arquivo pyproject.toml
+
+```toml
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv_reader"
+version = "1.0.0"
+description = "Modulo Python para ler arquivos csv"
+
+[tool.setuptools]
+ext-modules = [
+  {name = "csv_reader", sources = ["src/csv_reader.c"]}
+]
+```
+
+* [build-system]: Especifica as dependências e o backend de build.
+* [project]: Informações sobre o projeto, como nome, versão e descrição.
+* [tool.setuptools]: Configura o módulo de extensão, incluindo o nome e as fontes.
+
+### Criação do Pacote de Distribuição
+
+O comando `python -m build` é utilizado para construir pacotes de distribuição de um projeto Python. Este comando é parte do pacote build, que é uma ferramenta independente para construção de pacotes Python.
+
+### Funções do Comando `python -m build`
+
+1. Cria Pacotes de Distribuição:
+ - Source Distribution (sdist): Cria um arquivo tar.gz contendo o código fonte do projeto.
+ - Wheel Distribution (wheel): Cria um arquivo *.whl, que é um formato binário que pode ser instalado com pip.
+
+2. Automatiza o Processo de Build:
+ - Simplifica a criação de pacotes de distribuição.
+ - Garante que os pacotes sejam gerados de acordo com os padrões de empacotamento do Python.
+
+### Passo a Passo do `python -m build`
+
+Ao executar `python -m build` em um projeto, a ferramenta segue os seguintes passos:
+
+1. Identifica o Projeto:
+ - Encontra o arquivo pyproject.toml ou setup.py no diretório atual.
+
+2. Processa as Configurações:
+ - Lê as configurações do pyproject.toml ou setup.py para determinar como construir os pacotes.
+
+3. Executa a Construção:
+ - Cria a distribuição de fonte (sdist) e/ou distribuição de wheel (bdist_wheel).
+
+4. Gera os Arquivos de Distribuição:
+ - Coloca os pacotes resultantes no diretório dist.
+
+### Exemplo de Uso
+
+Para usar python -m build, primeiro certifique-se de que o pacote build está instalado:
+
+```sh
+pip install build
+```
+
+Depois, navegue até o diretório do projeto que contém o arquivo pyproject.toml ou setup.py e execute:
+
+```sh
+python -m build
+```
+
+Isso criará os pacotes de distribuição no diretório dist.
+
+### Benefícios
+
+* Simplicidade: Simplifica o processo de construção de pacotes, especialmente para projetos que seguem a estrutura moderna com pyproject.toml.
+* Consistência: Garante que os pacotes sejam construídos de forma consistente, de acordo com os padrões recomendados.
+* Portabilidade: Cria pacotes que podem ser facilmente distribuídos e instalados em diferentes ambientes.
+
+### Teste a extensão em Python:
+
+```python
+import csv_reader
+
+print("Lendo CSV com delimitador padrão (ponto e vírgula):")
+result = csv_reader.read_csv('caminho_do_arquivo.csv')
+for row in result:
+    print(row)
+
+print("Lendo CSV com delimitador de vírgula:")
+result = csv_reader.read_csv('caminho_do_arquivo.csv', ',')
+for row in result:
+    print(row)
+```
+
+## Intenção de Estudo
+
+A intenção de escrever este código foi estudar a linguagem C e suas capacidades de interação com Python. Implementando um módulo Python em C para ler arquivos CSV, foi possível explorar aspectos importantes da linguagem C, como manipulação de arquivos, alocação de memória, e integração com a API do Python. Esta prática proporciona uma compreensão mais profunda tanto do C quanto do Python, além de desenvolver habilidades de programação que são valiosas em diversas aplicações de software.
