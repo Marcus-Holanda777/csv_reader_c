@@ -169,7 +169,7 @@ PyMODINIT_FUNC PyInit_csv_reader(void) {
 
 ## Criação do Pacote de Distribuição
 
-Para configurar e construir o módulo python, foi usado o pacote `setuptools` e um arquivo `pyproject.toml`.
+Para configurar e construir o módulo python, foi usado o pacote [setuptools](https://setuptools.pypa.io/en/latest/) e um arquivo `pyproject.toml`.
 
 ### Arquivo pyproject.toml
 
