@@ -198,16 +198,16 @@ ext-modules = [
 Ao executar `python -m build` em um projeto, a ferramenta segue os seguintes passos:
 
 1. Identifica o Projeto:
- - Encontra o arquivo pyproject.toml ou setup.py no diretório atual.
+   - Encontra o arquivo pyproject.toml ou setup.py no diretório atual.
 
 2. Processa as Configurações:
- - Lê as configurações do pyproject.toml ou setup.py para determinar como construir os pacotes.
+   - Lê as configurações do pyproject.toml ou setup.py para determinar como construir os pacotes.
 
 3. Executa a Construção:
- - Cria a distribuição de fonte (sdist) e/ou distribuição de wheel (bdist_wheel).
+   - Cria a distribuição de fonte (sdist) e/ou distribuição de wheel (bdist_wheel).
 
 4. Gera os Arquivos de Distribuição:
- - Coloca os pacotes resultantes no diretório dist.
+   - Coloca os pacotes resultantes no diretório dist.
 
 ### Exemplo de Uso
 
