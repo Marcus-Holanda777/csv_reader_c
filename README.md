@@ -167,11 +167,11 @@ PyMODINIT_FUNC PyInit_csv_reader(void) {
 * Define a estrutura do módulo.
 * `PyInit_csv_reader`: Função de inicialização do módulo, que é chamada quando o módulo é importado em Python.
 
-## Configuração do Projeto com `pyproject.toml`
+## Criação do Pacote de Distribuição
 
-Para configurar e construir o módulo usando `setuptools` e um arquivo `pyproject.toml`, siga os passos abaixo:
+Para configurar e construir o módulo python, foi usado o pacote `setuptools` e um arquivo `pyproject.toml`.
 
-### Crie o Arquivo pyproject.toml
+### Arquivo pyproject.toml
 
 ```toml
 [build-system]
@@ -192,20 +192,6 @@ ext-modules = [
 * [build-system]: Especifica as dependências e o backend de build.
 * [project]: Informações sobre o projeto, como nome, versão e descrição.
 * [tool.setuptools]: Configura o módulo de extensão, incluindo o nome e as fontes.
-
-### Criação do Pacote de Distribuição
-
-O comando `python -m build` é utilizado para construir pacotes de distribuição de um projeto Python. Este comando é parte do pacote build, que é uma ferramenta independente para construção de pacotes Python.
-
-### Funções do Comando `python -m build`
-
-1. Cria Pacotes de Distribuição:
- - Source Distribution (sdist): Cria um arquivo tar.gz contendo o código fonte do projeto.
- - Wheel Distribution (wheel): Cria um arquivo *.whl, que é um formato binário que pode ser instalado com pip.
-
-2. Automatiza o Processo de Build:
- - Simplifica a criação de pacotes de distribuição.
- - Garante que os pacotes sejam gerados de acordo com os padrões de empacotamento do Python.
 
 ### Passo a Passo do `python -m build`
 
