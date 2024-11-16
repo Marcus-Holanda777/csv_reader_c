@@ -25,3 +25,13 @@ O módulo possui a função principal `read_csv`, que:
 #include <stdlib.h>
 #include <string.h>
 ```
+
+* Python.h: Inclui a API do Python.
+* stdio.h, stdlib.h, string.h: Para funções de entrada/saída padrão e manipulação de strings.
+
+### 2. Definição de Constantes
+
+```c
+#define MAX_ROW 1024 // tamanho máximo das linhas
+#define DELIMITER_DEFAULT ";" // delimitador padrão
+```
