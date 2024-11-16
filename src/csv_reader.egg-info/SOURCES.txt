@@ -1,0 +1,6 @@
+pyproject.toml
+src/csv_reader.c
+src/csv_reader.egg-info/PKG-INFO
+src/csv_reader.egg-info/SOURCES.txt
+src/csv_reader.egg-info/dependency_links.txt
+src/csv_reader.egg-info/top_level.txt

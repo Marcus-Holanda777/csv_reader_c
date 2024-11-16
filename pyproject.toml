@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv_reader"
+version = "1.0.0"
+description = "Modulo Python para ler arquivos csv"
+
+[tool.setuptools]
+ext-modules = [
+  {name = "csv_reader", sources = ["src/csv_reader.c"]}
+]
